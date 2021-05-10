@@ -1,0 +1,11 @@
+remove this if the common properties is going to be read from cloud config server
+if not make sure this put back in the application.yml
+
+eureka:
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        hostname: localhost

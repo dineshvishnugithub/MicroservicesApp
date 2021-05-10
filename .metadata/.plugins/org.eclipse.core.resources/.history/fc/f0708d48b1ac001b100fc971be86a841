@@ -1,0 +1,16 @@
+server:
+    port: 8083
+
+spring:
+    application:
+        name: OrderService
+        
+microservice:
+    payment-service:
+        endpoints:
+            endpoint:
+                 uri: http://PaymentService/payment/doPayment
+    order-service:
+        endpoints:
+            endpoint:
+                 uri: http://OrderService/orders/createTransaction
